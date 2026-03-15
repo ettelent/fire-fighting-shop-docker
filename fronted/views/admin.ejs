@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>admin panel</title>
+    <style>
+        body { font-family: sans-serif; padding: 40px; background: #f4f4f4; }
+        table { width: 100%; border-collapse: collapse; background: white; }
+        th, td { padding: 15px; border: 1px solid #ddd; text-align: left; }
+        th { background: #333; color: white; }
+        .total-row { font-weight: bold; font-size: 1.2em; }
+        .empty-msg { text-align: center; padding: 20px; }
+    </style>
+</head>
+<body>
+<h2> Совершенные заказы</h2>
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Телефон</th>
+            <th>Состав</th>
+            <th>Сумма</th>
+            <th>Дата</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% if (orders && orders.length > 0) { %>
+            <% orders.forEach(order => { %>
+                <tr>
+                    <td><%= order.id %></td>
+                    <td><%= order.phone %></td>
+                    <td><%= order.cart_content %></td>
+                    <td><%= order.total_price %> ₽</td>
+                    <td><%= new Date(order.created_at).toLocaleString() %></td>
+                </tr>
+            <% }) %>
+        <% } else { %>
+            <tr><td colspan="5" style="text-align:center;">Заказов пока нет</td></tr>
+        <% } %>
+    </tbody>
+</table>
+
+<h2> Запросы на обратную связь</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Email</th>
+            <th>Организация</th>
+            <th>Телефон</th>
+            <th>Комментарий</th>
+            <th>Дата</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% if (feedback && feedback.length > 0) { %>
+            <% feedback.forEach(item => { %>
+                <tr>
+                    <td><%= item.email %></td>
+                    <td><%= item.organization %></td>
+                    <td><%= item.phone %></td>
+                    <td><%= item.comment %></td>
+                    <td><%= new Date(item.created_at).toLocaleString() %></td>
+                </tr>
+            <% }) %>
+        <% } else { %>
+            <tr><td colspan="5" style="text-align:center;">Вопросов пока нет</td></tr>
+        <% } %>
+    </tbody>
+</table>
+    <br>
+    <a href="/" style="color: black;">Вернуться в магазин</a>
+</body>
+
+</html>

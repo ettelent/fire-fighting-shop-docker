@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Корзина</title>
+    <style>
+        body { font-family: sans-serif; padding: 40px; background: #f4f4f4; }
+        table { width: 100%; border-collapse: collapse; background: white; }
+        th, td { padding: 15px; border: 1px solid #ddd; text-align: left; }
+        th { background: #333; color: white; }
+        .total-row { font-weight: bold; font-size: 1.2em; }
+        .empty-msg { text-align: center; padding: 20px; }
+    </style>
+</head>
+<body>
+    <h1> Ваша корзина</h1>
+
+<table>
+    <thead>
+        <tr>
+                <th>Наименование товара</th>
+                <th>Цена за ед.</th>
+                <th>Кол-во</th>
+            <th>Сумма</th>
+        </tr>
+    </thead>
+    <tbody>
+            <% if (products.length > 0) { %>
+                <% products.forEach(function(item) { %>
+                <tr>
+                        <td><%= item.name %></td>
+                        <td><%= item.price %> ₽</td>
+                        <td><%= item.quantity %> шт.</td>
+                        <td><%= item.price * item.quantity %> ₽</td>
+                    </tr>
+                <% }); %>
+                <tr class="total-row">
+                    <td colspan="3" style="text-align: right;">ИТОГО:</td>
+                    <td><%= total %> ₽</td>
+                </tr>
+        <% } else { %>
+                <tr>
+                    <td colspan="4" class="empty-msg">Корзина пуста. Выберите товары в каталоге!</td>
+                </tr>
+        <% } %>
+    </tbody>
+</table>
+
+    <br>
+    <a href="/">Вернуться в магазин</a>
+    <div style="margin-top: 30px; background: white; padding: 20px; border: 1px solid #ddd;">
+    <h3>Оформить заказ</h3>
+    <form onsubmit="sendOrder(); return false;">
+        <input type="tel" name="phone" id="phoneInput" placeholder="Ваш номер телефона" required 
+               style="padding: 10px; width: 250px;">
+        <button type="submit" onclick="sendOrder()" style="padding: 10px 20px; background: #28a745; color: white; border: none; cursor: pointer;">
+            Заказать
+        </button>
+        <span id="statusMessage" style="margin-left: 15px; font-weight: bold;"></span>
+    </form>
+</div>
+</body>
+<script>
+    function sendOrder() {
+        const phoneInput = document.getElementById('phoneInput')
+        const status=document.getElementById('statusMessage')
+
+        const phone = phoneInput.value.trim();
+
+    if (!phone) {
+        status.style.color = "red";
+        status.innerText = "Введите номер!";
+        return;
+    }
+    status.style.color = "blue";
+    status.innerText = "Отправка...";
+        
+    const params = new URLSearchParams();
+    params.append('phone', phone);
+        fetch('/checkout', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: 'phone=' + encodeURIComponent(phone)
+        })
+        .then(response => response.text())
+        .then(data => {
+            if (data === "success") {
+                status.style.color = "#28a745";
+                status.innerHTML = "Данные успешно отправлены! Мы свяжемся с вами."
+
+                document.getElementById('phoneInput').value = "";
+                setTimeout(() => {
+                    status.innerText = "";
+                }, 3000);
+            } else {
+                status.style.color = "red"
+                status.innerText = "Ошибка:" + data;
+            }
+        })
+    };        
+</script>
+</html>

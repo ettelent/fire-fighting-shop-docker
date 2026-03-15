@@ -1,0 +1,1174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>123321</title>
+    <div id="head">
+        <img src="img/house.png" id="house" class="img-head">
+        <div id="select-wrapper">
+            <select id="city-select">
+                <option value="spb" selected>Санкт-Петербург</option>
+                <option value="kirov">Киров</option>
+                <option value="kazan">Казань</option>
+                <option value="perm">Пермь</option>
+            </select>
+            <a href="#philials"><button style="width: auto; height: 25px; background-color: transparent; border-radius: 5px; border: 2px solid #555555cc;"><span>К филлиалам</span></button></a>
+        </div>
+        <img src="img/mail.png" id="mail" class="img-head">
+        <span class="mailHead">mail@mail.ru</span>
+        <img src="img/phone.webp" id="phoneNumber" class="img-head">
+        <span class="numberHead">+X-XXX-XXX-XX-XX</span>
+        <div class="callHead">
+            <a href="#poster-block"><img src="img/phone.webp" id="phone">
+            <button id="textPhone">Заказать звонок</button>
+            <div class="overlay" id="overlay"></a>
+                <div class="modal">
+                    <button id="closeModal">X</button>
+                    <span>Хотите заказать звонок?</span>
+                    <input type="tel" class="headModal" value="+7 (" maxlength="18"> <!-- Доработать в джс -->
+                    <textarea type="text" class="headModal" id="comment" placeholder="Ваш комментарий" maxlength="490"></textarea>
+                    <button id="sendModal">Отправить</button>
+                </div>
+            </div>
+        </div>
+        <div id="contact">
+            <a href="https://web.telegram.org/@churk9i" target="_blank"><img src="img/telegram-app.jpg" class="img-head"></a>
+            <a href="https://vk.com/zxcpizdecccc" target="_blank"><img src="img/vk.png" class="img-head"></a>
+        </div>
+    </div>
+    <div id="rehead">
+        <div class="container" id="header-left">
+            <div id="logo-wrapper">
+                <img id="logotipe" src="img/logotipe.png">
+                <div id="logo-text-group">
+                    <h1 class="logo-text">Противопожарное оборудование</h1>
+                    <h1 class="logo-text">С доставкой по России</h1>
+                </div>
+            </div>
+        </div>
+        <div id="header-center">
+            <div id="search-wrapper">
+            <input type="text" id="catalog-search" placeholder="Поиск по каталогу">
+            <img id="search-btm" src="img/search.png" class="img-head">
+            </div>
+        </div>
+        <div id="header-right">
+            <div id="basket-block">
+                <a href="/cart" style="text-decoration: none;"><button id="basket">
+                    <span>Корзина</span>
+                    <img src="img/basket.webp" id="basket-img">
+                </button></a>
+            </div>
+        </div>
+    </div>
+    <div id="select-head">
+        <span class="select-window">Каталог 🡻
+            <div class="tooltip">
+                <div class="side-item">
+                    Огнетушители 🡺
+                    <div class="second-level-menu">
+                        <div class="selectProduct">
+                            <div class="second-select">
+                                <div class="select11">
+                                    <span>Порошковый OP-4</span>
+                                    <div><span>Цена:999₽</span><button onclick="addToCart(101)"><img src="img/basket.webp" class="select-basket-img"></button></div>
+                                </div>
+                                <img src="img/op-4.webp" class="fire-extinguisher">
+                            </div>
+                        </div>
+                        <div class="selectProduct">
+                            <div class="second-select">
+                                <div class="select11">
+                                    <span>Углекислотный ОУ-2</span>
+                                    <div><span>Цена:1299₽</span><button onclick="addToCart(102)"><img src="img/basket.webp" class="select-basket-img"></button></div>
+                                </div>
+                                <img src="img/ou-2.jpg" class="fire-extinguisher">
+                            </div>
+                        </div>
+                        <div class="selectProduct">
+                            <div class="second-select">
+                                <div class="select11">
+                                    <span>Воздушный ОВП-8</span>
+                                    <div><span>Цена:899₽</span><button onclick="addToCart(103)"><img src="img/basket.webp" class="select-basket-img"></button></div>
+                                </div>
+                                <img src="img/OVP-8.jpg" class="fire-extinguisher">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="side-item">
+                    Рукава 🡺
+                    <div class="second-level-menu">
+                        <div class="selectProduct">
+                            <div class="second-select">
+                                <div class="select11">
+                                    <span>Стандарт-100</span>
+                                    <div><span>Цена:5999₽</span><button onclick="addToCart(201)"><img src="img/basket.webp" class="select-basket-img"></button></div>
+                                </div>
+                                <img src="img/standart-100.webp" class="fire-extinguisher">
+                            </div>
+                        </div>
+                        <div class="selectProduct">
+                            <div class="second-select">
+                                <div class="select11">
+                                    <span>Классик ГР-65П</span>
+                                    <div><span>Цена:1999₽</span><button onclick="addToCart(202)"><img src="img/basket.webp" class="select-basket-img"></button></div>
+                                </div>
+                                <img src="img/classic-65.jpg" class="fire-extinguisher">
+                            </div>
+                        </div>
+                        <div class="selectProduct">
+                            <div class="second-select">
+                                <div class="select11">
+                                    <span>Премиум 1.6МПа</span>
+                                    <div><span>Цена:2999₽</span><button onclick="addToCart(203)"><img src="img/basket.webp" class="select-basket-img"></button></div>
+                                </div>
+                                <img src="img/premium.jpg" class="fire-extinguisher">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="side-item">
+                    Извещатели 🡺
+                    <div class="second-level-menu">
+                        <div class="selectProduct">
+                            <div class="second-select">
+                                <div class="select11">
+                                    <span>Магнитный ИП-212</span>
+                                    <div><span>Цена:799₽</span><button onclick="addToCart(301)"><img src="img/basket.webp" class="select-basket-img"></button></div>
+                                </div>
+                                <img src="img/magnetic.webp" class="fire-extinguisher">
+                            </div>
+                        </div>
+                        <div class="selectProduct">
+                            <div class="second-select">
+                                <div class="select11">
+                                    <span>Точечный IPD-3.1</span>
+                                    <div><span>Цена:2799₽</span><button onclick="addToCart(302)"><img src="img/basket.webp" class="select-basket-img"></button></div>
+                                </div>
+                                <img src="img/IPD.webp" class="fire-extinguisher">
+                            </div>
+                        </div>
+                        <div class="selectProduct">
+                            <div class="second-select">
+                                <div class="select11">
+                                    <span>Линейный 6500R</span>
+                                    <div><span>Цена:3999₽</span><button onclick="addToCart(303)"><img src="img/basket.webp" class="select-basket-img"></button></div>
+                                </div>
+                                <img src="img/linel.webp" class="fire-extinguisher">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </span>
+        <span class="select-window">О компании 🡻 <div class="tooltip" id="select-info-company">your info company your info company your info company your info company your info company your info company your info company</div></span>
+        <span class="select-window">Контакты 🡻
+            <div class="tooltip">
+                <div>contact1</div>
+                <div>contact2</div>
+                <div>contact3</div>
+                <div>contact4</div>
+            </div>
+        </span>
+            
+        <span class="select-window">Блог 🡻 <div class="tooltip">info4</div></span>
+    </div>
+    <div id="card">
+        <img src="img/firefighter.jpg" id="firefighter">
+        <div id="card-text">
+            <h1 >ПРОТИВОПОЖАРНОЕ</h1>
+            <h1 >ОБОРУДОВАНИЕ С ДОСТАВКОЙ</h1>
+            <h1 >ПО РОССИИ</h1>
+            <a href="#" style="color: white; "><div class="testing-text" id="test1">
+                <span>TESTING TEXT</span>
+            </div></a>
+            <a href="#" style="color: white; "><div class="testing-text" id="test2">
+                <span>TESTING TEXT</span>
+            </div></a>
+            <a href="#" style="color: white; "><div class="testing-text" id="test3">
+                <span>TESTING TEXT</span>
+            </div></a>
+        </div>
+    </div>
+    <div id="categories-base">
+        <div id="categories-text">
+            <span>Популярные категории</span>
+        </div>
+        <div id="categories-grid">
+            <div class="categories-card">
+                <img src="img/categories-test.jpg" class="categories">
+                <span class="categories-description">TESTING CATEGORIES</span>
+            </div>
+            <div class="categories-card">
+                <img src="img/categories-test.jpg" class="categories">
+                <span class="categories-description">TESTING CATEGORIES</span>
+            </div>
+            <div class="categories-card">
+                <img src="img/categories-test.jpg" class="categories">
+                <span class="categories-description">TESTING CATEGORIES</span>
+            </div>
+            <div class="categories-card">
+                <img src="img/categories-test.jpg" class="categories">
+                <span class="categories-description">TESTING CATEGORIES</span>
+            </div>
+            <div class="categories-card">
+                <img src="img/categories-test.jpg" class="categories">
+                <span class="categories-description">TESTING CATEGORIES</span>
+            </div>
+            <div class="categories-card">
+                <img src="img/categories-test.jpg" class="categories">
+                <span class="categories-description">TESTING CATEGORIES</span>
+            </div>
+            <div class="categories-card">
+                <img src="img/categories-test.jpg" class="categories">
+                <span class="categories-description">TESTING CATEGORIES</span>
+            </div>
+        </div>
+    </div>    
+    <div id="short-info">
+        <div class="info-item">
+            <span class="info-number">69</span>
+            <span class="info-text">лет на рынке продажи пожарного оборужования</span>
+        </div>
+        <div class="info-item">
+            <span class="info-number">1488</span>
+            <span class="info-text">совершенных сделок</span>
+        </div>
+        <div class="info-item">
+            <span class="info-number">100%</span>
+            <span class="info-text">гарантия от МЧС</span>
+        </div>
+        <div class="info-item">
+            <span class="info-number">67</span>
+            <span class="info-text">опытных штатных специалистов</span>
+        </div>
+    </div>
+    <div id="poster-block">
+        <div id="poster-item">
+            <div id="form-inputs-actual">
+                <div id="poster-header">
+                    <span id="poster-text">У вас остались предложения или вопросы?</span>
+                    <span id="poster-text2">Оставьте ваши контакты и мы свяжемся с вами</span>
+                </div>
+                <div id="actual-form-row">
+                    <div id="form-inputs">
+                        <input type="email" class="poster-input" id="f-email" placeholder="Введите почту">
+                        <input type="text" class="poster-input" id="f-org" placeholder="Введите организацю">
+                        <input type="tel" class="poster-input" id="f-phone" value="+7 (" maxlength="18"> <!-- Доработать в джс -->
+                        <textarea type="text" class="poster-input" id="f-comment" placeholder="Ваш комментарий" maxlength="490"></textarea>
+                        <input type="file" class="poster-input" id="file-upload" style="display: none;">
+                        <label for="file-upload" class="poster-input" id="poster-label">
+                            <span>Прикрепите файл</span>
+                        </label>
+                    </div>
+                    <div id="confirm-form">
+                        <button class="poster-input" id="poster-button" onclick="sendFeedback()" disabled>Отправить</button>
+                        <div id="feedbackStatus" style="margin-top: 10px; font-weight: bold;"></div>
+                        <div id="checkbox-wrapper">
+                            <input type="checkbox" id="agreement-checkbox">
+                            <label id="agreement">Нажимая "Отправить", я соглашаюсь с обработкой персональный данных на условиях <a href="#">политики конфиденциальности</a></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="poster">
+            <img src="img/poster-img.png" id="poster-img">
+        </div>
+    </div>
+    <div id="map-container">
+        <iframe
+        id="city-map"
+        src="https://yandex.ru/map-widget/v1/?ll=30.315868%2C59.939095&z=12"
+        width="950px"
+        height="600px"
+        frameborder="0"
+        allowfullscreen="false">
+        </iframe>
+        <div id="side-map">
+            <div id="map-text">Наши филиалы в вашем городе</div>
+            <div id="map-info">
+                <div id="philials">
+                    🚩Test philials
+                    <div id="philials-item">
+                        <div>● Philials1</div>
+                        <div>● Philials1</div>
+                        <div>● Philials1</div>
+                        <div>● Philials1</div>
+                    </div>
+                </div>
+                <img src="img/phone.webp" id="philials-phone">
+                <div id="philials-number-phone">XXX-XXX-XX-XX</div>
+                <img src="img/mail.png" id="philials-mail">
+                <div id="philialsMail">youremail@mail.ru</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    h1 {
+
+        padding: 0;
+    }
+
+    #head {
+        display: flex;
+        justify-content: center;
+        white-space: nowrap;
+        width: 100%;
+    }
+
+    .img-head {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        margin-top: 20px;
+    }
+    
+    .mailHead, .numberHead {
+        display: flex;
+        flex-shrink: 0;
+        font-size: 20px;
+        white-space: nowrap;
+        margin-top: 16px;
+        margin-right: 200px;
+    }
+
+    .callHead {
+        border-radius: 6px;
+        max-width: 220px;
+        width: 100%;
+        height: 50px;
+        font-size: 24px;
+        padding: 0px;
+        border-left-width: 8px;
+        margin-top: 10px;
+    }
+
+    #textPhone {
+        position: relative;
+        padding-left: 30px;
+        border: none;
+        border-radius: 5px;
+        background-color: orange;
+        width: 150px;
+        height: 40px;
+        margin-left: 60px;
+        cursor: pointer;
+    }
+
+    #phone {
+        position: absolute;
+        margin-left: 65px;
+        margin-top: 5px;
+        width: 30px;
+        height: 30px;
+        z-index: 2;
+    }
+
+    .overlay {
+        position: fixed;
+        display: flex;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.6s ease;
+        z-index: 5;
+    }
+
+    .modal {
+        background: white;
+        padding: 30px;
+        border-radius: 8px;
+        transition: all 0.6s ease;
+        min-width: 360px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        padding-left: 35px;
+    }
+
+    #closeModal {
+        cursor: pointer;
+        font-size: 25px;
+        border: transparent;
+        background-color: transparent;
+        display: block;
+        margin-left: auto;
+        margin-right: 0;
+    }
+
+    #sendModal {
+        cursor: pointer;
+        background-color: #30aa00;
+        width: 250px;
+        height: 30px;
+        border: none;
+        font-size: 20px;
+        font-family: 'Verdana', sans-serif;
+    }
+
+    .headModal {
+        width: 250px;
+        height: 30px;
+        border-radius: 5px;
+        border-color: #a1a1a1af;
+    }
+
+    .overlay.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .overlay.active .modal {
+        transform: translateY(0);
+    }
+    /*card firefighter*/
+
+    #firefighter {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    #card {
+        display: flex;
+        position: relative;
+        margin: 0px auto;
+        width: 1600px;
+    }
+
+    #card-text {
+        position: absolute;
+        z-index: 2;
+        top: 140px;
+        left: 140px;
+        color: white;
+        font-weight: 900;
+    }
+
+    #card-text h1 {
+        margin: 0;
+        padding: 0;
+        line-height: 1.2;
+        font-weight: 900;
+        font-family: 'Verdana', sans-serif;
+        letter-spacing: -1px;
+        font-size: 48px;
+    } 
+
+    .testing-text {
+        margin-top: 80px;
+        border: 3px solid white;
+        height: 80px;
+        width: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        backdrop-filter: blur(3px);
+        font-family: 'Verdana', sans-serif;
+    }
+
+    #select-head {
+        display: flex;
+        align-items: flex-end;
+        border: 2px solid #777777a4;
+        background-color: #e4e3e3;
+        height: 45px;
+        width: 1600px;
+        margin: 0 auto;
+        padding-right: 30px;
+        padding-left: 30px;
+        gap: 50px;
+        font-size: 25px;
+    }
+
+    .select-window {
+        display: flex;
+        position: relative;
+        flex: 1;
+        align-items: center;
+        justify-content: center;
+        border-right: 4px dashed rgba(0, 0, 0, 0.349);
+        font-family: 'Verdana', sans-serif;
+        padding: 7px;
+        padding-right: 40px;
+        cursor: pointer;
+        height: 100%;
+    }
+
+    .select-window:last-child {
+        border-right: none;
+    }
+
+    .select-window:hover .tooltip {
+        display: block;
+    }
+
+    .tooltip {
+        position: absolute;
+        display: none;
+        top: 100%;
+        left: 47%;
+        transform: translateX(-50%);
+        z-index: 3;
+        width: 50px;
+        height: auto;
+        width: 370px;
+        background-color: #e4e3e3;
+        color: black;
+        padding: 5px;
+        font-family: 'Verdana', sans-serif;
+        border: 2px solid rgba(0, 0, 0, 0.788);
+        border-radius: 15px;
+    }
+
+    .tooltip div {
+        padding: 10px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .tooltip div:last-child {
+        border-bottom: none; 
+    }
+
+    .second-level-menu {
+        display: none;
+        position: absolute;
+        left: 100%;
+        top: 0;
+        z-index: 5;
+        background-color: #e4e3e3;
+        color: black;
+        border: 2px solid rgba(0, 0, 0, 0.788);
+        border-radius: 15px;
+        max-width: 600px;
+        height: auto;
+        width: auto;
+        white-space: nowrap;
+    }
+
+    .second-level-menu::before {
+        content: "";
+        position: absolute;
+        left: -15px;
+        width: 100px;
+        top: 0;
+        height: 100%;
+        
+    }
+
+    .side-item:hover .second-level-menu {
+        display: block;
+    }
+
+    #select-info-company {
+        
+        width: 450px;
+        height: auto;
+    }
+
+    .second-select {
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+    }
+    
+    .select-basket-img {
+        height: 30px;
+        width: 30px;
+    } 
+ 
+    #basket-select {
+        display: flex;
+    }
+
+    /* Селект с огнетушителями */
+    .fire-extinguisher {
+        position: relative;
+        width: 90px;
+        height: 90px;
+        
+    }
+
+    /*select city*/
+    #select-wrapper {
+        display: inline-block;
+        width: 180px;
+        height: 20px;
+        margin-right: 450px;
+        margin-top: 6px;
+    }
+
+    #city-select {
+        border: none;
+        outline: none;
+        cursor: pointer;
+        margin-top: 16px;
+        font-size: 16px;
+        color: #333;
+        appearance: none;
+    }
+
+    #rehead {
+        display: flex;
+        white-space: nowrap;
+        width: 100%;
+        max-width: 1800px;
+        margin: 0 auto;
+    }
+
+    /* catalog search*/
+    #catalog-search {
+        display: inline-block;
+        justify-content: center;
+        border: none;
+        outline: none;
+        border-bottom: 2px solid #a1a1a1;
+        margin-top: 35px;
+        margin-left: 00px;
+        font-size: 16px;
+        width: 400px;
+        white-space: nowrap;
+    }
+
+    /*logotipe and text*/
+    #logotipe {
+        display: flex;
+        width: 200px;
+        height: auto;
+    }
+
+    #logo-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    #header-right, #header-right {
+        flex: 1;
+        display: inline-block;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    #header-center {
+        display: inline-block;
+        margin-left: 250px;
+        margin-top: 30px;
+    }
+
+    .logo-text {
+        display: flex;
+        border-left: 2px solid #333;
+        font-size: 20px;
+        margin: 0;
+    }
+
+    /*categorise*/
+    #categories-base {
+        background-color: #333;
+        height: 900px;
+        width: 100%;
+        display: flex;
+        margin-top: -200px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #categories-text {
+        display: flex;
+        color: white;
+        margin-top: 200px;
+        margin-right: 1100px;
+        font-size: 32px;
+        font-family: 'Verdana', sans-serif;
+    }
+
+    .categories {
+        display: flex;
+        border: 1px solid red;
+        filter: blur(2px);
+        justify-content: center;
+        align-items: center;
+        width: 300px;
+        height: 300px;
+        border-radius: 5px;
+        margin-left: 2px;
+    }
+
+    #categories-grid {
+        display: flex;
+        position: relative;
+        flex-wrap: wrap;
+        width: 100%;
+        max-width: 1600px;
+        gap: 20px;
+        margin-top: 15px;        
+    }
+
+    .categories-description {  
+        z-index: 2;
+        max-width: 300px;
+        width: 100%;
+        height: 300px;
+        position: absolute;
+        margin-left: 170px;
+        transform: translate(-50%, -280px);
+        color: white;
+        font-size: 32px;
+        font-family: 'Verdana', sans-serif;
+    }
+
+    /*Shot info block*/
+    #short-info {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 190px;
+        margin-top: 250px;
+        font-weight: 900;
+    }
+
+    .info-text {
+        display: block;
+        flex-direction: column;
+        max-width: 250px;
+        width: 100%;
+        font-size: 28px;
+        text-align: center;
+        font-family: 'Verdana', sans-serif;  
+    }
+
+    .info-number {
+        font-size: 102px;
+        font-weight: 900;
+        color: red;
+        font-family: 'Lato', sans-serif;
+    }
+
+    .info-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /*poster block*/
+    #poster-img {
+        margin-bottom: -10px;
+        width: 542px;
+        height: auto;
+        margin-left: 100px;
+    }
+
+    #poster-item {
+        display: flex;        
+        left: 150px;
+        flex-direction: row;
+        gap: 15px;
+        max-width: 1000px;
+        align-items: flex-start;
+    }
+
+    #poster-block {
+        background: linear-gradient(to right, #E60000 0%, #E60000 40%, #331111 100%);
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 50px;
+        height: 800px;
+        margin-top: 200px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #poster-header {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #actual-form-row {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        gap: 20px;
+    }
+
+    #poster-text {
+        font-size: 48px;
+        color: white;
+        font-family: 'Lato', sans-serif;
+        min-width: 1000px;
+        flex-shrink: 1; 
+    }
+
+    #poster-text2 {
+        font-size: 28px;
+        color: rgb(179, 177, 177);
+        font-family: 'Lato', sans-serif;
+        flex-shrink: 1; 
+    }
+
+    .poster-input {
+        border: 3px dashed white;
+        color: white;
+        padding: 5px;
+        font-size: 16px;
+        width: 400px;
+        height: 50px;
+        background-color: red;
+        flex-direction: column;
+        outline: none;
+        font-family: 'Lato', sans-serif;
+        padding: 5px;
+        margin-left: 5px;
+    }
+
+    .poster-input::placeholder {
+        color: white;
+        font-size: 16px;
+        padding: 5px;
+        min-width: 400px;
+    }
+
+    #form-inputs {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        max-width: 1000px;
+    }
+
+    #f-comment {
+        field-sizing: content;
+        height: 200px;
+        padding-bottom: 165px;
+        resize: none;
+        overflow: hidden;
+    }
+
+    #checkbox-wrapper {
+        display: flex;
+        align-items: center;
+        color: white;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        font-family: 'Lato', sans-serif;
+        font-size: 14px;
+        gap: 8px;
+    }
+
+    #checkbox-wrapper input {
+        cursor: pointer;
+        width: 18px;
+        height: 18px;
+    }
+
+    #agreement {
+        width: 350px;
+    }
+
+    #agreement a {
+        color: white;
+    }
+
+    #poster-button:disabled {
+        background-color: #555 !important;
+        border-color: #888 !important;
+        color: #999 !important;
+        cursor: not-allowed;
+        opacity: 0.6;
+    }
+
+    #poster-button:not(:disabled) {
+        cursor: pointer;
+        background-color: red;
+    }
+    
+    /*map block */
+    #map-container {
+        display: flex;
+        width: 1920px;
+        margin: 30px auto;
+        gap: 50px;
+        flex-direction: row;
+    }
+
+    #city-map{
+        padding-top: 20px;
+    }
+
+    #side-map {
+        gap: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #map-text {
+        padding-top: 50px;
+        font-family: 'Verdana', sans-serif; 
+        font-size: 28px;
+        font-weight: 900;
+    }
+
+    #map-info {
+        border-radius: 6px;
+        border: 1px solid rgba(153, 153, 153, 0.671);
+        width: 520px;
+        height: 250px;
+        font-family: 'Verdana', sans-serif; 
+    }
+
+    #philials {
+        padding-top: 24px;
+        font-size: 24px;
+    }
+
+    #philials-item {
+        display: flex;
+        flex-direction: column;
+        font-size: 20px;
+        padding-left: 15px;
+    }
+
+    #philials-phone {
+        position: absolute;
+        margin-top: 7px;
+        width: 20px;
+        height: 20px;
+        margin-left: 6px;
+    }
+
+    #philials-number-phone {
+        position: relative;
+        margin-top: 8px;
+        margin-left: 30px;
+    }
+
+    #philials-mail {
+        position: absolute;
+        margin-top: 7px;
+        width: 20px;
+        height: 20px;
+        margin-left: 6px;
+    }
+
+    #philialsMail {
+        position: relative;
+        margin-top: 8px;
+        margin-left: 30px;
+    }
+
+    /*basket*/
+    #basket-block {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #basket {
+        display: flex;
+        width: auto;
+        height: auto;
+        align-items: center;
+        justify-content: center;
+        padding: 6px 10px;
+        background-color: transparent;
+        border-radius: 5px;
+        border-color: #7c7c7c8a;
+        cursor: pointer;
+    }
+
+    #basket-img {
+        height: 30px;
+        width: 30px;
+        
+    }
+
+    #header-right {
+        display: flex;
+        margin: 40px auto;
+    }
+
+    #f-comment {
+    resize: vertical;
+    overflow: auto;
+}
+</style>
+
+<script>
+    //Создаем куки/сохраняем файлы в корзине юзера
+    function setCookie(name, value, days) {
+        let expires ="";
+        if(days) {
+            let date = new Date();
+            date.setTime(date.getTime() + (days *24*60*60*1000));
+            expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + value + expires + "; path=/";
+    }
+    //Читаем куку
+    function getCookie(name) {
+        let nameEQ = name + "=";
+        let ca = document.cookie.split(';');
+        for(let i=0; i<ca.length; i++) {
+            let c= ca[i];
+            while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+        }
+        return null;
+    }
+    //Добавление товара в корзину
+    function addToCart(productId) {
+        let cart = getCookie("cart");
+        let cartArray = (cart && cart.trim() !== "") ? cart.split(',') : [];
+        cartArray.push(productId);
+        setCookie("cart", cartArray.join(','), 30);
+        console.log("В корзине сейчас:", cartArray);
+        updateBasketCounter();
+    }
+    //Добавление цифры
+    function updateBasketCounter() {
+        let cart = getCookie("cart");
+        let count = (cart && cart !== 0) ? cart.split(',').length:0;
+        const basketBtn = document.querySelector('#basket span');
+        if (basketBtn) {
+            basketBtn.innerText="Корзина ("+ count +")";
+        }
+    }
+    window.onload = updateBasketCounter;
+    //call head window
+    // const openBtn = document.getElementById('textPhone')
+    // const closeBtn = document.getElementById('closeModal')
+    // const overlay = document.getElementById('overlay')
+    // const sendModal = document.getElementById('sendModal')
+
+    // openBtn.addEventListener('click', () => {
+    //     overlay.classList.add('active');
+    // });
+
+    // closeBtn.addEventListener('click', () => {
+    //     overlay.classList.remove('active');
+    // });
+
+    // sendModal.addEventListener('click', () => {
+    //     overlay.classList.remove('active');
+    // });
+
+    // overlay.addEventListener('click', (e) => {
+    //     if (e.target === overlay) {
+    //         overlay.classList.remove('active');
+    //     }
+    // });
+
+    //city-map logic
+    const cityMaps = {
+    "spb": "https://yandex.ru/map-widget/v1/?ll=30.315868%2C59.939095&z=12",
+    "kirov": "https://yandex.ru/map-widget/v1/?ll=49.667978%2C58.603581&z=12",
+    "kazan": "https://yandex.ru/map-widget/v1/?ll=49.106414%2C55.796127&z=12",
+    "perm": "https://yandex.ru/map-widget/v1/?ll=56.229441%2C58.022832&z=12"
+    };
+    const citySelect = document.getElementById('city-select')
+    const mapIframe = document.getElementById('city-map')
+
+    citySelect.addEventListener('change', (e) => {
+        const selectedCity = e.target.value;
+
+        if (cityMaps[selectedCity]) {
+            mapIframe.style.opacity='0.5';
+            mapIframe.src=cityMaps[selectedCity];
+            mapIframe.onload=() => {
+                mapIframe.style.opacity='1';
+            };
+        }
+    });
+
+    //Авто-ввод номера по форме 7-(ххх)-ххх-хх-хх
+    document.querySelectorAll('input[type="tel"]').forEach(input => {
+        input.addEventListener('input', (e) => {
+            let x = e.target.value.replace(/\D/g, '').match(/(\d{0,1})(\d{0,3})(\d{0,3})(\d{0,2})(\d{0,2})/);
+            // Если первая цифра 8, меняем на 7
+        if (x[1] === '8') x[1] = '7';
+        // Если пусто или стерли всё, оставляем +7 (
+        if (!x[2] && x[1] !== '7') { e.target.value = '+7 ('; return; }
+
+        e.target.value = !x[3] ? `+${x[1]} (${x[2]}` : 
+                         !x[4] ? `+${x[1]} (${x[2]}) ${x[3]}` : 
+                         !x[5] ? `+${x[1]} (${x[2]}) ${x[3]}-${x[4]}` : 
+                                 `+${x[1]} (${x[2]}) ${x[3]}-${x[4]}-${x[5]}`;
+    });
+
+    // Чтобы нельзя было удалить +7 (
+    input.addEventListener('keydown', (e) => {
+        if (e.target.value.length <= 4 && e.key === 'Backspace') e.preventDefault();
+        });
+    });
+
+    function sendFeedback() {
+        const data = {
+            email: document.getElementById('f-email').value,
+            organization: document.getElementById('f-org').value,
+            phone: document.getElementById('f-phone').value,
+            comment: document.getElementById('f-comment').value
+    };
+    const status = document.getElementById('feedbackStatus');
+    status.innerText = "Отправка...";
+    fetch('/send-feedback', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+        body: new URLSearchParams(data)
+    })
+    .then(res => res.text())
+    .then(result => {
+        if(result === "success") {
+            status.style.color = "white";
+            status.style.fontFamily = "'Verdana', sans-serif";
+            status.innerText = "Спасибо! Мы свяжемся с вами."
+            document.querySelectorAll('.poster-input').forEach(i => i.value = "");
+        }
+    })
+    .catch(err => {
+        if (status) {
+            status.style.color="yellow";
+            status.innerText="Ошибка при отправку. Попробуйте позже";
+        }
+        console.error("Ошибка:", err);
+    });
+}
+const checkbox = document.getElementById('agreement-checkbox');
+const submitBtn = document.getElementById('poster-button');
+
+if (checkbox) {
+    checkbox.addEventListener('change', function() {
+        submitBtn.disabled = !this.checked;
+
+        if (this.checked) {
+            submitBtn.style.opacity = "1";
+            submitBtn.style.cursor = "pointer";
+            submitBtn.style.backgroundColor = "#28a745"
+        } else {
+            submitBtn.style.opacity = "0.5";
+            submitBtn.style.cursor = "not-allowed";
+            submitBtn.style.backgroundColor = "#ccc";
+        }
+    });
+}
+
+</script>
+</html>
