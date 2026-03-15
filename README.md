@@ -19,3 +19,10 @@ How to launch
     -cd fire-fighting-shop-docker
   -launch Docker
     -docker-compose up --build
+
+
+How to login
+  -Enter in the search bar: http://localhost:3000
+  -admin menu: http://localhost:3000/admin
+    -login: admin
+    -password: admin
