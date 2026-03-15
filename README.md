@@ -22,4 +22,14 @@
 Откройте терминал и выполните:
 ```bash
 git clone [https://github.com/ettelent/fire-fighting-shop-docker.git](https://github.com/ettelent/fire-fighting-shop-docker.git)
+```
+```bash
 cd fire-fighting-shop-docker
+```
+```bash
+docker-compose up --build
+```
+
+## Для захода на сайт => http://localhost:3000
+## Для входа в корзину(через строку) => http://localhost:3000/cart
+## Для входа в админ-панель => http://localhost:3000/admin
