@@ -1,28 +1,25 @@
-project2
-  -A full-fledged website for the sale of fire-fighting equipment.
+# 🧯 Fire-Fighting Equipment Store
 
+Проект полноценного интернет-магазина с контейнеризацией и базой данных.
 
-main parts
-  **Backend** - API (express)
-  **Frontend**  - Client part
+### Стек технологий
+* **Backend:** Node.js (Express.js)
+* **Frontend:** HTML5, CSS3, JavaScript (EJS templates)
+* **Database:** MySQL 8.0
+* **Infrastructure:** Docker & Docker Compose
 
+### Возможности проекта
+* 🛒 **Корзина:** добавление товаров и управление заказами.
+* 🔐 **Админ-панель:** управление ассортиментом через защищенный интерфейс.
+* 🐳 **Оркестрация:** быстрый запуск всей среды одной командой.
+* 📦 **Persistent Storage:** данные базы сохраняются даже после остановки контейнеров.
 
-Technologies
-  **Backend** - express.js, cookies-parser, EJS, MySQL
-  **Frontend** - Fetch API, Native CSS
+---
 
+## Установка и запуск
 
-
-How to launch
-  -Copy the repository
-    -git clone https://github.com/ettelent/fire-fighting-shop-docker.git
-    -cd fire-fighting-shop-docker
-  -launch Docker
-    -docker-compose up --build
-
-
-How to login
-  -Enter in the search bar: http://localhost:3000
-  -admin menu: http://localhost:3000/admin
-    -login: admin
-    -password: admin
+### 1. Клонирование репозитория
+Откройте терминал и выполните:
+```bash
+git clone [https://github.com/ettelent/fire-fighting-shop-docker.git](https://github.com/ettelent/fire-fighting-shop-docker.git)
+cd fire-fighting-shop-docker
