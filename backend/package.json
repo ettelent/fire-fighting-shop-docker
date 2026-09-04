@@ -8,7 +8,6 @@
     "cookie-parser": "^1.4.7",
     "depd": "^2.0.0",
     "ejs": "^5.0.1",
-    "expres": "^0.0.5",
     "express": "^5.2.1",
     "express-basic-auth": "^1.2.1",
     "express-session": "^1.19.0",
@@ -20,6 +19,7 @@
     "uid-safe": "^2.1.5"
   },
   "scripts": {
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

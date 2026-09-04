@@ -21,6 +21,7 @@ services:
       - db
     volumes:
       - ./backend:/app
+      - /app/node_modules
       - ./fronted:/fronted
     environment:
       - DB_HOST=db
