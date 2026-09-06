@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 620" width="420" height="620" role="img" aria-label="Специалист отдела продаж">
+  <defs>
+    <linearGradient id="suit" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2f3a4d"/>
+      <stop offset="100%" stop-color="#1b2331"/>
+    </linearGradient>
+    <linearGradient id="suitDark" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#26303f"/>
+      <stop offset="100%" stop-color="#161d28"/>
+    </linearGradient>
+    <linearGradient id="skin" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f2c9a8"/>
+      <stop offset="100%" stop-color="#e0ac86"/>
+    </linearGradient>
+    <linearGradient id="tie" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e63946"/>
+      <stop offset="100%" stop-color="#b3202c"/>
+    </linearGradient>
+    <linearGradient id="halo" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity=".16"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <!-- dissolves the bottom edge so the figure doesn't end in a hard cut -->
+    <linearGradient id="fadeGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fff" stop-opacity="1"/>
+      <stop offset="76%" stop-color="#fff" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <mask id="bottomFade">
+      <rect x="0" y="0" width="420" height="620" fill="url(#fadeGrad)"/>
+    </mask>
+  </defs>
+  <g mask="url(#bottomFade)">
+
+  <!-- soft halo behind figure -->
+  <ellipse cx="210" cy="330" rx="196" ry="270" fill="url(#halo)"/>
+
+  <!-- neck -->
+  <path d="M175 196h70v66c0 18-70 18-70 0z" fill="#dda67f"/>
+  <path d="M175 214c22 16 48 16 70 0v-18h-70z" fill="#c8916c" opacity=".55"/>
+
+  <!-- shoulders / jacket body -->
+  <path d="M210 250c-52 0-96 14-124 38-22 19-34 46-34 78v254h316V366c0-32-12-59-34-78-28-24-72-38-124-38z" fill="url(#suit)"/>
+
+  <!-- shirt -->
+  <path d="M210 250l-46 22 46 78 46-78z" fill="#f7f9fc"/>
+  <path d="M210 250l-46 22 20 10 26-32z" fill="#e4e9f1"/>
+  <path d="M210 250l46 22-20 10-26-32z" fill="#e4e9f1"/>
+
+  <!-- collar -->
+  <path d="M164 272l24-14 22 34-30 16z" fill="#ffffff"/>
+  <path d="M256 272l-24-14-22 34 30 16z" fill="#ffffff"/>
+
+  <!-- tie -->
+  <path d="M210 292l-15 16 15 22 15-22z" fill="url(#tie)"/>
+  <path d="M210 330l-13 12 8 108 5 22 5-22 8-108z" fill="url(#tie)"/>
+
+  <!-- jacket lapels -->
+  <path d="M164 272c-22 8-40 20-52 34l58 68 40-90-30-16z" fill="url(#suitDark)"/>
+  <path d="M256 272c22 8 40 20 52 34l-58 68-40-90 30-16z" fill="url(#suitDark)"/>
+
+  <!-- pocket square -->
+  <path d="M282 392h34l-6 18h-24z" fill="#e63946"/>
+
+  <!-- head -->
+  <path d="M210 44c-42 0-70 30-70 74 0 46 30 88 70 88s70-42 70-88c0-44-28-74-70-74z" fill="url(#skin)"/>
+
+  <!-- hair -->
+  <path d="M210 34c-46 0-74 30-74 72 0 12 2 22 5 30 5-26 10-40 22-48 16 12 40 18 66 16 22-2 36 6 44 30 3-8 5-18 5-28 0-42-26-72-68-72z" fill="#33281f"/>
+
+  <!-- ears -->
+  <ellipse cx="140" cy="126" rx="9" ry="14" fill="#e6b58e"/>
+  <ellipse cx="280" cy="126" rx="9" ry="14" fill="#e6b58e"/>
+
+  <!-- brows -->
+  <path d="M166 108c10-6 22-6 31-1" stroke="#33281f" stroke-width="6" stroke-linecap="round" fill="none"/>
+  <path d="M223 107c9-5 21-5 31 1" stroke="#33281f" stroke-width="6" stroke-linecap="round" fill="none"/>
+
+  <!-- eyes -->
+  <ellipse cx="181" cy="126" rx="7" ry="8" fill="#2b2b2b"/>
+  <ellipse cx="239" cy="126" rx="7" ry="8" fill="#2b2b2b"/>
+  <circle cx="183" cy="123" r="2.4" fill="#ffffff"/>
+  <circle cx="241" cy="123" r="2.4" fill="#ffffff"/>
+
+  <!-- nose -->
+  <path d="M210 132v20l-8 6" stroke="#c8916c" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+  <!-- smile -->
+  <path d="M190 172c12 11 28 11 40 0" stroke="#a9683f" stroke-width="5" stroke-linecap="round" fill="none"/>
+
+  <!-- arm holding folder -->
+  <path d="M308 384c14 10 22 26 22 46v122h-64V430c0-24 14-40 42-46z" fill="url(#suitDark)"/>
+  <path d="M112 384c-14 10-22 26-22 46v122h64V430c0-24-14-40-42-46z" fill="url(#suitDark)"/>
+
+  <!-- cuff + hand -->
+  <rect x="92" y="512" width="60" height="16" rx="4" fill="#f7f9fc"/>
+  <rect x="96" y="524" width="52" height="40" rx="18" fill="url(#skin)"/>
+
+  <!-- clipboard -->
+  <rect x="60" y="448" width="120" height="150" rx="8" fill="#f4f6f9" transform="rotate(-8 120 523)"/>
+  <rect x="60" y="448" width="120" height="26" rx="8" fill="#e63946" transform="rotate(-8 120 523)"/>
+  <g transform="rotate(-8 120 523)" fill="#c3cad6">
+    <rect x="76" y="490" width="88" height="7" rx="3.5"/>
+    <rect x="76" y="510" width="88" height="7" rx="3.5"/>
+    <rect x="76" y="530" width="60" height="7" rx="3.5"/>
+    <rect x="76" y="550" width="72" height="7" rx="3.5"/>
+  </g>
+  </g>
+</svg>
